@@ -49,9 +49,9 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1662179248394613&ev=PageView&noscript=1"/><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1339270591500008&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->
 <title>Calo no lábio do bebê? O sinal despercebido que explica a amamentação difícil</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon-v2.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-v2-32.png">
-<link rel="apple-touch-icon" href="assets/favicon-v2-180.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon-news.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-news-32.png">
+<link rel="apple-touch-icon" href="assets/favicon-news-180.png">
 <meta name="theme-color" content="#c4170c">
 <link rel="preload" as="image" href="assets/hero-v3.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,8 +93,19 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   h1.head{font-family:var(--sans);font-weight:800;font-size:clamp(2.1rem,7vw,3.1rem);line-height:1.08;letter-spacing:-.02em;color:var(--ink);margin:2px 0 14px}
   .subhead{font-family:var(--serif);font-weight:500;font-size:clamp(1.15rem,3.2vw,1.4rem);line-height:1.4;color:var(--ink-2)}
 
-  .byline{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;font-family:var(--sans);font-size:.82rem;color:var(--muted);margin:22px 0 22px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .byline{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 14px;font-family:var(--sans);font-size:.82rem;color:var(--muted);margin:22px 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .byline .author{color:var(--ink);font-weight:700}
+  .byline-meta{white-space:nowrap}
+  @media(max-width:400px){.byline{font-size:.74rem}}
+
+  /* barra de últimas (chamada) */
+  .newsbar{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+  .newsbar-in{max-width:1000px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:10px;min-width:0}
+  .newsbar-tag{flex:0 0 auto;font-family:var(--sans);font-weight:800;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--red);display:inline-flex;align-items:center;gap:6px}
+  .newsbar-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);display:inline-block;animation:blink 1.4s ease-in-out infinite}
+  @keyframes blink{50%{opacity:.25}}
+  @media(prefers-reduced-motion:reduce){.newsbar-tag::before{animation:none}}
+  .newsbar-txt{font-family:var(--sans);font-weight:600;font-size:.82rem;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 
   figure.cover{margin:6px 0 26px}
   figure.cover img{width:100%;border-radius:8px;aspect-ratio:16/10;object-fit:cover}
@@ -202,9 +213,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   footer a{color:#e6ebf0;font-weight:700;text-decoration:none}
   footer .fine{color:#7b8189;font-size:.78rem;margin-top:14px}
 
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  .reveal{opacity:1;transform:none}
 
   @media(min-width:720px){
     .expert-grid{grid-template-columns:0.8fr 1.2fr;gap:34px}
@@ -224,29 +233,27 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   </div>
 </header>
 
-<!-- 2 + 3. KICKER + HEADLINE -->
-<article class="article">
-  <div class="kicker-row reveal">
-    <span class="kicker">Amamentação</span>
-    <span class="kdot">·</span>
-    <span>Atualizado em <span id="data-pub">agosto de 2026</span></span>
-    <span class="kdot">·</span>
-    <span>6 min de leitura</span>
+<!-- Chamada de matéria (últimas) -->
+<div class="newsbar">
+  <div class="newsbar-in">
+    <span class="newsbar-tag">Últimas</span>
+    <span class="newsbar-txt">O sinal no lábio do bebê que faz mães desmamarem sem precisar</span>
   </div>
-  <h1 class="head reveal">Calo no lábio?</h1>
-  <p class="subhead reveal">O sinal que passa despercebido no bebê e ajuda a explicar por que tantas mães acham que o problema é falta de leite — quando quase sempre não é.</p>
+</div>
+
+<!-- HEADLINE -->
+<article class="article">
+  <h1 class="head">Ela achava que era pouco leite. Era o lábio do bebê.</h1>
+  <p class="subhead">Um calo quase invisível na boca do recém-nascido denuncia a pega errada — e explica as mamadas que não terminam nunca, a dor e a impressão de que o leite "não sustenta".</p>
 
   <!-- 4. BYLINE + CAPA -->
-  <div class="byline reveal">
+  <div class="byline">
     <span class="author">Por Redação</span>
-    <span class="kdot">·</span>
-    <span>Atualizado em <span class="data-pub2">agosto de 2026</span></span>
-    <span class="kdot">·</span>
-    <span>6 min de leitura</span>
+    <span class="byline-meta">Atualizado em <span class="data-pub2">agosto de 2026</span> · 6 min de leitura</span>
   </div>
 
   <figure class="cover reveal">
-    <img src="assets/hero-v3.webp" alt="Bebê inquieto brigando com o peito durante a amamentação" fetchpriority="high" decoding="async">
+    <img src="assets/hero-v3.webp" alt="Bebê inquieto brigando com o peito durante a amamentação" fetchpriority="high" decoding="async" style="object-position:40% 40%">
     <figcaption>A maioria das dificuldades relatadas nas primeiras semanas tem origem na forma como o bebê extrai o leite — não na quantidade disponível. Foto: Manual do Recém-Nascido.</figcaption>
   </figure>
 
@@ -270,28 +277,28 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 
   <ol class="signals reveal">
     <li>
-      <img class="sig-img" src="assets/img/sinal1-calo.webp" alt="Bebê fazendo esforço na pega do peito" loading="lazy" decoding="async">
+      <img class="sig-img" src="assets/img/sinal1-calo.webp" alt="Bebê fazendo esforço na pega do peito" loading="lazy" decoding="async" style="object-position:50% 40%">
       <div class="sig-body">
         <b>Calo nos lábios</b>
         <p>É o sinal mais comum e o primeiro que costuma chamar a atenção das mães. Formado pelo atrito repetido durante a sucção, indica que o bebê está compensando com os lábios, fazendo um esforço excessivo e desnecessário para mamar.</p>
       </div>
     </li>
     <li>
-      <img class="sig-img" src="assets/img/sinal2-sono.webp" alt="Bebê adormecido no peito da mãe" loading="lazy" decoding="async">
+      <img class="sig-img" src="assets/img/sinal2-sono.webp" alt="Bebê adormecido no peito da mãe" loading="lazy" decoding="async" style="object-position:30% 45%">
       <div class="sig-body">
         <b>Sonolência precoce</b>
         <p>Bebês que adormecem antes de parecer satisfeitos, e acordam em seguida, podem estar gastando muita energia para um retorno de leite pequeno.</p>
       </div>
     </li>
     <li>
-      <img class="sig-img" src="assets/img/sinal3-dor.webp" alt="Mãe sentindo dor ao amamentar" loading="lazy" decoding="async">
+      <img class="sig-img" src="assets/img/sinal3-dor.webp" alt="Mãe sentindo dor ao amamentar" loading="lazy" decoding="async" style="object-position:65% 45%">
       <div class="sig-body">
         <b>Desconforto para amamentar</b>
         <p>Dor, fissuras e o bico com aparência achatada após a mamada (o chamado "bico em formato de batom") não deveriam fazer parte da rotina de amamentar, mesmo sendo comuns. "A dor costuma indicar que a pega está superficial, o que machuca a mãe e dificulta a extração para o bebê", afirma Dayane. Segundo ela, quando a pega é ajustada corretamente, a dor cessa de forma praticamente imediata, mesmo em casos de fissuras já existentes.</p>
       </div>
     </li>
     <li>
-      <img class="sig-img" src="assets/img/sinal4-seio.webp" alt="Bebê inquieto querendo voltar ao seio" loading="lazy" decoding="async">
+      <img class="sig-img" src="assets/img/sinal4-seio.webp" alt="Bebê inquieto querendo voltar ao seio" loading="lazy" decoding="async" style="object-position:40% 60%">
       <div class="sig-body">
         <b>Sugar sem engolir</b>
         <p>Muitos bebês sugam, mas não engolem leite. Há dois tipos de sucção: na sucção nutritiva, o bebê mama em ritmo mais lento, com movimentos visíveis de deglutição, geralmente sugando no máximo três vezes antes de engolir. Já na sucção não nutritiva, o ritmo é mais rápido e sem deglutição frequente — um padrão normal apenas no fim da mamada, quando o bebê já está satisfeito.</p>
