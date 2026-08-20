@@ -53,7 +53,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-v2-32.png">
 <link rel="apple-touch-icon" href="assets/favicon-v2-180.png">
 <meta name="theme-color" content="#c4170c">
-<link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-v3.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -119,6 +119,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 
   /* vídeo */
   .video-wrap{margin:26px 0 8px}
+  .materia-vid{display:block;margin:0 auto;width:100%;max-width:440px;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#12161b}
   .video-cap{font-family:var(--sans);font-size:.76rem;color:var(--muted);margin-top:8px}
   .video-ph{background:#12161b;border-radius:10px;aspect-ratio:16/9;display:grid;place-items:center;text-align:center;color:#cfd4da;font-family:var(--sans);padding:20px}
   .video-ph .play{width:66px;height:66px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;margin:0 auto 12px}
@@ -245,7 +246,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   </div>
 
   <figure class="cover reveal">
-    <img src="assets/hero.webp" alt="Mãe amamentando o bebê no colo" fetchpriority="high" decoding="async">
+    <img src="assets/hero-v3.webp" alt="Bebê inquieto brigando com o peito durante a amamentação" fetchpriority="high" decoding="async">
     <figcaption>A maioria das dificuldades relatadas nas primeiras semanas tem origem na forma como o bebê extrai o leite — não na quantidade disponível. Foto: Manual do Recém-Nascido.</figcaption>
   </figure>
 
@@ -301,9 +302,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   <!-- ESPAÇO PARA VÍDEO -->
   <div class="video-wrap reveal">
     <div id="materia-video">
-      <!-- VTurb SmartPlayer (v4) -->
-      <vturb-smartplayer id="vid-6a871e7174e5d1ee1e6cbc96" style="display:block;margin:0 auto;width:100%;max-width:480px;border-radius:10px;overflow:hidden;"></vturb-smartplayer>
-      <script type="text/javascript" src="https://scripts.converteai.net/1e9d3663-4e9d-45cb-9c39-1d16362c41e5/players/6a871e7174e5d1ee1e6cbc96/v4/player.js" async></script>
+      <video class="materia-vid" src="assets/materia-loop.mp4" poster="assets/vid-poster.webp" autoplay muted loop playsinline preload="metadata"></video>
     </div>
     <div class="video-cap">Vídeo: como observar o calo nos lábios e o movimento da papada durante a mamada.</div>
   </div>
