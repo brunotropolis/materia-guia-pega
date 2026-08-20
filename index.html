@@ -52,7 +52,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 <link rel="icon" type="image/svg+xml" href="assets/favicon-v2.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-v2-32.png">
 <link rel="apple-touch-icon" href="assets/favicon-v2-180.png">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#c4170c">
 <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,11 +73,11 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   a{color:var(--link)}
 
   /* ---------- MASTHEAD ---------- */
-  .masthead{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
-  .mast-in{max-width:1000px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-  .wordmark{font-family:var(--sans);font-weight:800;letter-spacing:-.01em;font-size:.98rem;color:var(--ink);text-transform:uppercase;line-height:1.05;display:flex;align-items:center;gap:9px}
-  .wordmark::before{content:"";width:5px;height:20px;background:var(--red);display:inline-block;border-radius:1px}
-  .mast-sec{font-family:var(--sans);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--red);border:1px solid #f0cdca;background:#fdf3f2;padding:4px 10px;border-radius:3px}
+  .masthead{position:sticky;top:0;z-index:50;background:var(--red);box-shadow:0 1px 6px rgba(0,0,0,.12)}
+  .mast-in{max-width:1000px;margin:0 auto;padding:11px 20px;display:flex;align-items:baseline;gap:11px}
+  .wordmark{font-family:var(--sans);font-weight:800;letter-spacing:.03em;font-size:1.2rem;color:#fff;text-transform:uppercase;line-height:1}
+  .mast-cat{font-family:var(--sans);font-weight:600;font-size:.92rem;color:rgba(255,255,255,.92);line-height:1}
+  .mast-cat::before{content:"/";margin-right:6px;color:rgba(255,255,255,.55);font-weight:400}
 
   /* faixa publieditorial */
   .adlabel{background:var(--bg-soft);border-bottom:1px solid var(--line-2)}
@@ -216,18 +216,10 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 <!-- 1. MASTHEAD -->
 <header class="masthead">
   <div class="mast-in">
-    <div class="wordmark">Manual do Recém-Nascido</div>
-    <span class="mast-sec">Amamentação</span>
+    <span class="wordmark">Notícias</span>
+    <span class="mast-cat">Amamentação</span>
   </div>
 </header>
-
-<!-- Faixa de identificação (publieditorial) -->
-<div class="adlabel">
-  <div class="adlabel-in">
-    <span class="tagfill">Conteúdo de marca</span>
-    <span>Publieditorial produzido por <b>Manual do Recém-Nascido</b> em colaboração com a consultora Dayane Dos Anjos.</span>
-  </div>
-</div>
 
 <!-- 2 + 3. KICKER + HEADLINE -->
 <article class="article">
@@ -243,7 +235,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 
   <!-- 4. BYLINE + CAPA -->
   <div class="byline reveal">
-    <span class="author">Por Redação Manual do Recém-Nascido</span>
+    <span class="author">Por Dayane Dos Anjos</span>
     <span class="kdot">·</span>
     <span>Atualizado em <span class="data-pub2">agosto de 2026</span></span>
     <span class="kdot">·</span>
