@@ -56,7 +56,9 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 <link rel="preload" as="image" href="/assets/hero-calo.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"></noscript>
 <style>
   :root{
     --ink:#1a1a1a;--ink-2:#33383d;--muted:#71767c;--line:#e4e6e8;--line-2:#eceef0;
@@ -297,7 +299,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   <!-- ESPAÇO PARA VÍDEO -->
   <div class="video-wrap reveal">
     <div id="materia-video">
-      <video class="materia-vid" src="/assets/materia-loop.mp4" poster="/assets/vid-poster.webp" autoplay muted loop playsinline preload="metadata"></video>
+      <video class="materia-vid" data-src="/assets/materia-loop.mp4" poster="/assets/vid-poster.webp" muted loop playsinline preload="none"></video>
     </div>
     <div class="video-cap">Vídeo: à esquerda, a sucção nutritiva; à direita, a sucção não nutritiva.</div>
   </div>
@@ -438,6 +440,9 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   (function(){var p=new URLSearchParams(location.search);var keep=/^(utm_|fbclid|gclid|ttclid)/i;var pass=new URLSearchParams();p.forEach(function(v,k){if(keep.test(k))pass.append(k,v);});function gc(n){var m=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)');return m?m.pop():'';}var fbp=gc('_fbp');if(fbp)pass.append('fbp',fbp);var fbc=gc('_fbc');if(fbc)pass.append('fbc',fbc);try{pass.append('ua',navigator.userAgent);}catch(e){}var s=pass.toString();if(!s)return;document.querySelectorAll('a.btn-comprar').forEach(function(a){a.href+=(a.href.indexOf('?')>-1?'&':'?')+s;});})();
   /* ViewContent + InitiateCheckout (com preventDefault pra não cancelar o beacon) */
   (function(){var T=window.trackMeta||function(ev,cd){if(window.fbq)fbq('track',ev,cd||{});};T('ViewContent',{content_name:'Guia da Pega',content_type:'product',value:67.00,currency:'BRL'});document.querySelectorAll('a.btn-comprar').forEach(function(a){a.addEventListener('click',function(e){if(e.ctrlKey||e.metaKey||e.shiftKey||e.button)return;if(a.getAttribute('data-ic'))return;a.setAttribute('data-ic','1');e.preventDefault();var dest=a.href;T('InitiateCheckout',{content_name:'Guia da Pega',value:67.00,currency:'BRL'});setTimeout(function(){window.location.href=dest;},250);});});})();
+</script>
+<script>
+(function(){var v=document.querySelector(".materia-vid");if(!v)return;function load(){if(!v.dataset.src)return;v.src=v.dataset.src;v.removeAttribute("data-src");v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});}if("IntersectionObserver" in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){load();io.disconnect();}});},{rootMargin:"300px"});io.observe(v);}else{load();}})();
 </script>
 </body>
 </html>
