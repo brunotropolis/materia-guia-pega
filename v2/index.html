@@ -152,10 +152,10 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   ul.gains li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:15px 18px;font-family:var(--sans);font-weight:500;font-size:1rem;color:var(--ink-2)}
   ul.gains .ck{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:#e7f6ec;color:var(--verde-2);display:grid;place-items:center;font-weight:800;font-size:.85rem;margin-top:1px}
 
-  .buy-card{background:#fff;border:2px solid var(--verde);border-radius:18px;padding:32px 26px;text-align:center;box-shadow:var(--shadow);max-width:460px;margin:0 auto}
-  .buy-card .pname{font-family:var(--sans);font-weight:800;font-size:1.3rem;color:var(--ink);margin-bottom:4px}
-  .buy-card .cond{font-family:var(--serif);font-style:italic;color:var(--muted);font-size:.98rem;margin-bottom:16px}
-  .buy-card .price-box{background:#0f1c3f;border-radius:14px;padding:16px 14px;margin:4px 0 22px}
+  .buy-card{background:#0f1c3f;border:2px solid #0f1c3f;border-radius:18px;padding:32px 26px;text-align:center;box-shadow:0 18px 44px rgba(15,28,63,.30);max-width:460px;margin:0 auto}
+  .buy-card .pname{font-family:var(--sans);font-weight:800;font-size:1.35rem;color:#fff;margin-bottom:4px}
+  .buy-card .cond{font-family:var(--serif);font-style:italic;color:#aab6d6;font-size:.98rem;margin-bottom:18px}
+  .buy-card .price-box{margin:8px 0 22px}
   .buy-card .price{font-family:var(--sans);font-weight:800;color:#fff;font-size:clamp(3.2rem,14vw,4.4rem);line-height:1;margin:0}
   .buy-card .cash{font-family:var(--sans);color:#cdd6ea;font-size:.95rem;font-weight:600;margin:0 0 2px}
   .buy-card .parc{font-family:var(--sans);color:#aab6d6;font-size:.95rem;margin:6px 0 0}
@@ -164,16 +164,18 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   .btn.full{display:block;width:100%}
   @keyframes pulse{0%,100%{box-shadow:0 10px 26px rgba(22,163,74,.35)}50%{box-shadow:0 12px 32px rgba(22,163,74,.5)}}
   @media(prefers-reduced-motion:reduce){.btn{animation:none}}
-  .badges{display:flex;flex-direction:column;align-items:center;gap:8px;font-family:var(--sans);font-size:.88rem;color:var(--ink-2);font-weight:600;margin-top:18px}
+  .badges{display:flex;flex-direction:column;align-items:flex-start;gap:9px;width:max-content;max-width:100%;margin:18px auto 0;font-family:var(--sans);font-size:.9rem;color:#dbe3f4;font-weight:600;text-align:left}
 
   /* order bump */
-  .bump{max-width:460px;margin:22px auto 0;background:#fff;border:2px solid #0b6b34;border-radius:16px;padding:26px 22px;text-align:center}
-  .bump .tag{display:inline-block;font-family:var(--sans);font-weight:800;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#0b6b34;background:#e7f6ec;border:1px solid #bfe6cd;padding:5px 12px;border-radius:6px;margin-bottom:12px}
+  .bump{max-width:460px;margin:22px auto 0;background:#e8f1fb;border:1px solid #bcd4ef;border-radius:16px;padding:26px 22px;text-align:center}
+  .bump .tag{display:inline-block;font-family:var(--sans);font-weight:800;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#0f1c3f;background:#fff;border:1px solid #bcd4ef;padding:5px 12px;border-radius:6px;margin-bottom:12px}
   .bump .bt{font-family:var(--sans);font-weight:800;color:var(--ink);font-size:1.2rem;margin-bottom:8px}
   .bump p{font-size:.98rem;color:var(--ink-2);margin:0 auto 18px;max-width:380px}
-  .bump-price{background:#0b6b34;border-radius:12px;padding:15px 16px;margin:0 auto 20px;max-width:340px}
-  .bump-price .now{display:block;font-family:var(--sans);font-weight:800;color:#fff;font-size:1.7rem;line-height:1.1}
-  .bump-price .was{display:block;color:#bfe6cd;font-size:.82rem;margin-top:5px}
+  .bump-price{position:relative;background:#0f1c3f;border-radius:12px;padding:18px 16px 15px;margin:2px auto 20px;max-width:360px}
+  .bump-price .lbl{display:block;font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#aab6d6;margin-bottom:3px}
+  .bump-price .now{display:block;font-family:var(--sans);font-weight:800;color:#fff;font-size:1.95rem;line-height:1.05}
+  .bump-price .was{display:block;color:#cdd6ea;font-size:.85rem;margin-top:6px}
+  .bump-price .off{position:absolute;top:-11px;right:-8px;background:#f0b429;color:#3a2a08;font-family:var(--sans);font-weight:800;font-size:.72rem;letter-spacing:.02em;padding:4px 9px;border-radius:6px;box-shadow:0 4px 10px rgba(0,0,0,.28);transform:rotate(4deg)}
   .bump p b{color:var(--ink)}
   .btn.dark-green{background:#0b6b34}
 
@@ -331,11 +333,10 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
       <div class="pname">Guia da Pega</div>
       <div class="cond">Corrija a amamentação com uma condição especial</div>
       <div class="price-box">
-        <div class="cash">à vista no Pix</div>
         <div class="price">R$ 67</div>
-        <div class="parc">ou 12x de R$ 6,89</div>
+        <div class="parc">à vista ou em até 12x de R$ 6,89</div>
       </div>
-      <a href="https://payfast.greenn.com.br/136511/offer/sP4rpP?ch_id=24103&b_id_1=119667&b_offer_1=5MBzpG&b_id_2=119638&b_offer_2=zrQIbg" class="btn full btn-comprar btn-guia">Quero!!</a>
+      <a href="https://payfast.greenn.com.br/136511/offer/sP4rpP?ch_id=24103&b_id_1=119667&b_offer_1=5MBzpG&b_id_2=119638&b_offer_2=zrQIbg" class="btn full btn-comprar btn-guia">QUERO</a>
       <div class="badges"><span>✓ Acesso imediato</span><span>✓ Compra 100% segura</span><span>✓ Garantia de 7 dias</span></div>
     </div>
 
@@ -345,8 +346,10 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
       <div class="bt">Guia da Pega + Consultora</div>
       <p>Acompanhamento com uma consultora de amamentação direto no seu WhatsApp, pra te orientar e tirar suas dúvidas no dia a dia.</p>
       <div class="bump-price">
-        <span class="now">Os dois por R$ 147</span>
-        <span class="was">Só o acompanhamento, separado, já sai R$ 97</span>
+        <span class="off">10% OFF</span>
+        <span class="lbl">O combo ficará por</span>
+        <span class="now">R$ 147</span>
+        <span class="was">à vista ou em até 12x de R$ 15,11</span>
       </div>
       <!-- TODO: trocar href pelo checkout do COMBO R$147 quando o Bruno enviar (por enquanto aponta pro Guia R$67) -->
       <a href="https://payfast.greenn.com.br/136511/offer/sP4rpP?ch_id=24103&b_id_1=119667&b_offer_1=5MBzpG&b_id_2=119638&b_offer_2=zrQIbg" class="btn full dark-green btn-comprar btn-combo">Quero o combo</a>
