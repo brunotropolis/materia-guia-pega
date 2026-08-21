@@ -5,16 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <!-- Microsoft Clarity (mesmo projeto do Guia da Pega) -->
-<script type="text/javascript">
-(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window,document,"clarity","script","xq5004c7qg");
-</script>
+<!-- Clarity carregado sob demanda no bloco abaixo -->
 <!-- End Microsoft Clarity -->
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PTMJZNMZ');</script>
+<script>
+/* GTM + Clarity carregam na 1a interacao ou quando o navegador fica ocioso (tira do caminho critico) */
+(function(){var w=window,d=document,b=false;function boot(){if(b)return;b=true;
+var s=d.getElementsByTagName('script')[0];
+w.dataLayer=w.dataLayer||[];w.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});
+var g=d.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtm.js?id=GTM-PTMJZNMZ';s.parentNode.insertBefore(g,s);
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(w,d,"clarity","script","xq5004c7qg");}
+var ev=['scroll','touchstart','pointerdown','keydown','mousemove'];function o(){ev.forEach(function(e){w.removeEventListener(e,o);});boot();}
+ev.forEach(function(e){w.addEventListener(e,o,{passive:true});});
+if('requestIdleCallback' in w){requestIdleCallback(boot,{timeout:4000});}else{setTimeout(boot,3500);}})();
+</script>
 <!-- End Google Tag Manager -->
 <!-- Meta Pixel (Guia da Pega - 2 pixels) -->
 <script>
@@ -228,6 +232,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
   footer .fine{color:#7b8189;font-size:.78rem;margin-top:14px}
 
   .reveal{opacity:1;transform:none}
+  .offer,.expert,.faq-sec,.final,footer{content-visibility:auto;contain-intrinsic-size:auto 700px}
 
   @media(min-width:720px){
     .expert-grid{grid-template-columns:0.8fr 1.2fr;gap:34px}
