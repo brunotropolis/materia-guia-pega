@@ -341,7 +341,7 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 </article>
 
 <!-- 10. TRANSIÇÃO PRA OFERTA -->
-<section class="offer" id="oferta">
+<section class="offer" id="oferta" data-sec="oferta">
   <div class="offer-in">
     <h2 class="reveal">Tem um jeito de ofertar o seio para o bebê que deixa todos esses problemas para trás</h2>
     <p class="intro reveal">Em poucos minutos você aprende a deixar a amamentação confortável para vocês dois. A partir daí:</p>
@@ -478,6 +478,23 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 </script>
 <script>
 (function(){var v=document.querySelector(".materia-vid");if(!v)return;function load(){if(!v.dataset.src)return;v.src=v.dataset.src;v.removeAttribute("data-src");v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});}if("IntersectionObserver" in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){load();io.disconnect();}});},{rootMargin:"300px"});io.observe(v);}else{load();}})();
+</script>
+<!-- funil-secao (Sherlock) — universal, auto-detecta pagina/versao. abriu->viu oferta->viu botao->ic -->
+<script>
+(function(){
+  var U='https://n8n-n8n.xktssy.easypanel.host/webhook/ab-ic', h=location.hostname, p=location.pathname;
+  var m=p.match(/(canguru|coala|coruja|leao|suricato)/);
+  var PAG=/dbpocket/.test(h)?'pocket':/tdapocket/.test(h)?'guia':/perfis/.test(h)?(m?'quiz-'+m[1]:'quiz'):(h.split('.')[0]||'pagina');
+  var vm=p.match(/\/(v\d+|curta)(?:\/|$)/); var VER=vm?vm[1]:'base';
+  var BTN='.btn-comprar, a[href*="payfast"], a[href*="checkout"], a[href*="greenn"]';
+  function hit(ev){ try{ navigator.sendBeacon(U, new Blob([JSON.stringify({pagina:PAG,versao:VER,evento:ev})],{type:'text/plain'})); }catch(e){} }
+  var done={}; function once(ev){ if(done[ev])return; done[ev]=1; hit(ev); }
+  once('pageview');
+  function watch(sel,ev,th){ var el=document.querySelector(sel); if(!el)return; try{ var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ once(ev); io.disconnect(); return; } } },{threshold:th==null?0.25:th}); io.observe(el); }catch(e){ once(ev); } }
+  watch('[data-sec="oferta"]','viu_oferta',0.05); /* bloco alto: 5% visivel ja conta (25% subcontava e dava viu_botao > viu_oferta) */
+  watch(BTN,'viu_botao',0.25);
+  document.addEventListener('click',function(e){ var t=e.target.closest(BTN); if(t) once('ic'); },true);
+})();
 </script>
 </body>
 </html>
