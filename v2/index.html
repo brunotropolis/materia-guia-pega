@@ -453,7 +453,14 @@ fbq('init','1662179248394613');fbq('init','1339270591500008');
 </footer>
 
 <script>
-  /* data fixa no HTML ("agosto de 2026") — sem auto-data pra nunca exibir data futura */
+  /* data do dia em pt-BR na chamada (mantém a matéria "fresca") */
+  (function(){
+    try{
+      var d=new Date().toLocaleDateString('pt-BR',{day:'numeric',month:'long',year:'numeric'});
+      var a=document.getElementById('data-pub');if(a)a.textContent=d;
+      document.querySelectorAll('.data-pub2').forEach(function(e){e.textContent=d;});
+    }catch(e){}
+  })();
 
   /* reveal on scroll */
   (function(){
